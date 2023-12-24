@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Введите q:\nq=");
+        int q= scan.nextInt();
+        System.out.print("Введите w:\nw=");
+        int w= scan.nextInt();
+        while(w>q)
+        {
+            System.out.print("Введите w меньше q:\nq=");
+            q= scan.nextInt();
+            System.out.print("Введите w:\nw=");
+            w= scan.nextInt();
+        }
+        if(w==0)
+        {
+            System.out.print("w не должно быть равно 0!");
+            return;
+        }
+        int qw=q/w;
+        int qw1=q%w;
+        System.out.print("q/w=" + qw + "\nостаток равен " + qw1);
+    }
+}
