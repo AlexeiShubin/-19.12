@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Введите вещественное число с дробной частью: ");
+        float number= scan.nextFloat();
+        while (number%1==0) {
+            System.out.print("Введите дробное число: ");
+            number= scan.nextFloat();
+        }
+        byte examination= (byte) ((number%1*10)-(number%1*10%1));
+        int true_number;
+        if(examination<5){
+            true_number= (int) number;
+        }
+        else{
+            true_number=(int) (number+1);
+        }
+        System.out.println("Число после округления: " + true_number);
+
+    }
+}
