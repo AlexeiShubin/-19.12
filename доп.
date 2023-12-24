@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int number=scan.nextInt();
+        if(number==0)
+        {
+            System.out.println("Число не должн быть равно 0");
+            return;
+        }
+        int sum=0;
+        int one_number;
+        int a=0;
+        int number1=number;
+        while(number!=0)
+        {
+            number=number/10;
+            a++;
+        }
+        for (int i=0; i<a; i++)
+        {
+            one_number=number1%10;
+            number1=number1/10;
+            sum=sum+one_number;
+        }
+        System.out.println(sum);
+    }
+}
